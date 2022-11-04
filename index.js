@@ -118,16 +118,16 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(inningHome, inningAway) {
+function getInningScore(inning) {
 
   return {
-    "Home": inningHome,
-    "Away": inningAway
+    "Home": inning,
+    "Away": inning
   }
 
 }
 
-console.log(getInningScore(inning(), inning()));
+console.log(getInningScore(inning()));
 
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
