@@ -30,11 +30,15 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    Counter 1 has a closure and counter2 is not.
   
   2. Which of the two uses a closure? How can you tell?
+    counter1 uses a closure. It's a function nested inside another function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
-     counter2 be better?  
+     counter2 be better?
+     counter2 would b e
+     
 */
 
 // counter1 code
@@ -64,9 +68,11 @@ Use the inning function below to do the following:
 NOTE: This will be a callback function for the tasks below
 */
 
-function inning(/*Code Here*/){
-    /*Code Here*/
+function inning(min, max) {
+  return Math.round(Math.random() * (2 - 0) + 0);
 }
+
+console.log(inning());
 
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
@@ -83,9 +89,20 @@ Use the finalScore function below to do the following:
 }
 */ 
 
-function finalScore(/*Code Here*/){
-  /*Code Here*/
+function finalScore(inningHome, inningAway, gameLength) {
+
+  let gameScore = {"Home": 0, "Away": 0}
+
+  for (let i = 0; i < gameLength; i++){
+    gameScore["Home"] = gameScore["Home"] + inningHome;
+    gameScore["Away"] = gameScore["Away"] + inningAway;
+  }
+  
+return gameScore
+
 }
+
+console.log(finalScore(inning(), inning(), 9));
 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
@@ -101,10 +118,19 @@ For example: invoking getInningScore(inning) might return this object:
   */
 
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inningHome, inningAway) {
+  let gameScore = {"Away": 0, "Home": 0};
+
+  gameScore["Away"] = inningHome;
+  gameScore["Home"] = inningAway;
+
+  console.log(gameScore);
 
 }
+
+getInningScore(inning(), inning());
+
+
 
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
