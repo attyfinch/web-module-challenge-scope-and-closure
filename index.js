@@ -102,7 +102,7 @@ return gameScore
 
 }
 
-console.log(finalScore(inning(), inning(), 9));
+console.log(finalScore(inning(), inning(), 8));
 
 
 /* ⚾️⚾️⚾️ Task 4: getInningScore() ⚾️⚾️⚾️
@@ -119,18 +119,15 @@ For example: invoking getInningScore(inning) might return this object:
 
 
 function getInningScore(inningHome, inningAway) {
-  let gameScore = {"Away": 0, "Home": 0};
 
-  gameScore["Away"] = inningHome;
-  gameScore["Home"] = inningAway;
-
-  console.log(gameScore);
+  return {
+    "Home": inningHome,
+    "Away": inningAway
+  }
 
 }
 
-getInningScore(inning(), inning());
-
-
+console.log(getInningScore(inning(), inning()));
 
 
 /* STRETCH: ⚾️⚾️⚾️ Task 5: scoreboard() ⚾️⚾️⚾️
