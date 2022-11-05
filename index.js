@@ -30,14 +30,17 @@ console.log('example task:', processFirstItem(['foo','bar'],function(str){return
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
-    Counter 1 has a closure and counter2 is not.
+    The way the count variable is treated. In counter1 it's only availalbe for use locally, inside the counterMaker function.
+    In counter2 it's availble globally.
   
   2. Which of the two uses a closure? How can you tell?
     counter1 uses a closure. It's a function nested inside another function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?
-     counter2 would b e
+     counter2 would be preferable in situations where you need to update the count variable outside of the function.
+     counter1 is preferable in situations where the output of the function needs to be self contained so it can be used
+     in conjuction with other global elements.
      
 */
 
